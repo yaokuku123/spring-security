@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///security_authority
+    username: root
+    password: 199748
+mybatis:
+  type-aliases-package: com.yqj.domain
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.yqj: debug
