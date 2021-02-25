@@ -1,5 +1,6 @@
 package com.yqj.service.impl;
 
+import com.yqj.domain.SysUser;
 import com.yqj.mapper.UserMapper;
 import com.yqj.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userMapper.findByName(username);
+        SysUser user = userMapper.findByName(username);
+        return user;
     }
 }

@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
  * Date: 2021/2/25 10:46
  */
 @RestController
-@RequestMapping("/user")
-public class AuthTestController {
+@RequestMapping("/product")
+public class ProductTestController {
 
-    @GetMapping("/findAllTest")
+    @GetMapping("/findAll")
     public String findAllTest(){
-        return "success findAllTest...";
+        return "9001 success findAll...";
     }
 }

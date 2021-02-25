@@ -68,7 +68,7 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
         //得到当前认证的用户对象
         SysUser user = new SysUser();
         user.setUsername(authResult.getName());
-        user.setRoles((List<SysRole>) authResult.getCredentials());
+        user.setRoles((List<SysRole>) authResult.getAuthorities());
         //json web token构建
         String token = JwtUtils.generateTokenExpireInMinutes(user, prop.getPrivateKey(), 24 * 60);
         //返回token
